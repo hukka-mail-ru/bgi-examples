@@ -12,7 +12,7 @@ void drawAim(int x, int y)
 
 void drawHit(int x, int y)
 {
-    setcolor(6);
+    setcolor(YELLOW);
     x = mousex();
     y = mousey();
 
@@ -22,22 +22,18 @@ void drawHit(int x, int y)
     drawAim(x, y);
 }
 
-void mouseMove(int x, int y)
+void onMouseMove(int x, int y)
 {
-    x = mousex();
-    y = mousey();
-
     cleardevice();
-    drawAim(x, y);
+    drawAim(mousex(), mousey());
 }
 
 
 int WIN_MAIN() //  main() for Windows 
 {
     initwindow(640, 480);
-    setcolor(3);
 
-    registermousehandler(WM_MOUSEMOVE, mouseMove);
+    registermousehandler(WM_MOUSEMOVE, onMouseMove);
     registermousehandler(WM_LBUTTONDOWN, drawHit);
 
     getch(); // wait until we close the window
