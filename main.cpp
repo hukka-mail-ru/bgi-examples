@@ -1,18 +1,32 @@
 #include <graphics.h>
+#include <stdlib.h>
+
+int getRandom(int lower, int upper)
+{
+    return (rand() % (upper - lower + 1)) + lower;
+}
 
 
 int WIN_MAIN() //  main() for Windows 
 {
     initwindow(640, 480);
-    setcolor(3);
+    srand(0);   // Initialization of random number generator
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 1000; i++)
     {
-        circle(200, 200, i * 10);
-    }
+        setcolor(getRandom(BLACK, WHITE));
 
-    line(200, 50, 200, 350);
-    line(50, 200, 350, 200);
+        line(getRandom(0, 640),
+             getRandom(0, 480),
+             getRandom(0, 640),
+             getRandom(0, 480));
+
+        circle(getRandom(0, 640),
+               getRandom(0, 480),
+               getRandom(0, 100));
+
+        delay(30);
+    }
 
 
     getch(); // wait until we close the window
