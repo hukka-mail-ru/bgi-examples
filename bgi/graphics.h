@@ -30,7 +30,7 @@
 #include <sstream>          // Provides std::ostringstream
 // ---------------------------------------------------------------------------
 
-#define WINDOWS_MAIN(XXX) int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+#define WIN_MAIN(XXX) APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 
 
 // ---------------------------------------------------------------------------
