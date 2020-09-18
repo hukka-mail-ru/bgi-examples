@@ -1,19 +1,15 @@
 #include <graphics.h>
 
-void drawAim(int x, int y)
-{
-    setcolor(CYAN);
-
-    for (int i = 0; i < 10; i++)
-    {
-        circle(x, y, i * 3);
-    }
-}
 
 void onMouseMove(int x, int y)
 {
     cleardevice();
-    drawAim(mousex(), mousey());
+    setcolor(CYAN);
+
+    for (int i = 0; i < 10; i++)
+    {
+        circle(mousex(), mousey(), i * 3);
+    }
 }
 
 void onMousePress(int x, int y)
@@ -24,10 +20,7 @@ void onMousePress(int x, int y)
 
     setfillstyle(LINE_FILL, LIGHTMAGENTA);
     fillellipse(x, y, 50, 50);
-
-    drawAim(x, y);
 }
-
 
 
 int WIN_MAIN() //  main() for Windows 
