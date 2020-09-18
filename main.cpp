@@ -25,7 +25,7 @@ int WIN_MAIN() //  main() for Windows
                getRandom(0, 480),
                getRandom(0, 100));
 
-        delay(30);
+        delay(50);
     }
 
 
