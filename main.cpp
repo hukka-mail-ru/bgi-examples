@@ -10,7 +10,13 @@ void drawAim(int x, int y)
     }
 }
 
-void drawHit(int x, int y)
+void onMouseMove(int x, int y)
+{
+    cleardevice();
+    drawAim(mousex(), mousey());
+}
+
+void onMousePress(int x, int y)
 {
     setcolor(YELLOW);
     x = mousex();
@@ -22,11 +28,6 @@ void drawHit(int x, int y)
     drawAim(x, y);
 }
 
-void onMouseMove(int x, int y)
-{
-    cleardevice();
-    drawAim(mousex(), mousey());
-}
 
 
 int WIN_MAIN() //  main() for Windows 
@@ -34,7 +35,7 @@ int WIN_MAIN() //  main() for Windows
     initwindow(640, 480);
 
     registermousehandler(WM_MOUSEMOVE, onMouseMove);
-    registermousehandler(WM_LBUTTONDOWN, drawHit);
+    registermousehandler(WM_LBUTTONDOWN, onMousePress);
 
     getch(); // wait until we close the window
 }
