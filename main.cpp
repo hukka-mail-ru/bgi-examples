@@ -8,15 +8,13 @@ void onMouseMove(int x, int y)
 
     for (int i = 0; i < 10; i++)
     {
-        circle(mousex(), mousey(), i * 3);
+        circle(x, y, i * 3);
     }
 }
 
 void onMousePress(int x, int y)
 {
     setcolor(YELLOW);
-    x = mousex();
-    y = mousey();
 
     setfillstyle(LINE_FILL, LIGHTMAGENTA);
     fillellipse(x, y, 50, 50);
