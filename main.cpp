@@ -9,6 +9,7 @@ int WIN_MAIN() //  main() for Windows
     for (int i = 0; i < 10; i++)
     {
         circle(200, 200, i * 10);
+        delay(100);
     }
 
     line(200, 50, 200, 350);
