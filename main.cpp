@@ -4,7 +4,7 @@
 int WIN_MAIN() //  main() for Windows 
 {
     initwindow(640, 480);
-    setcolor(3);
+    setcolor(GREEN);
 
     for (int i = 0; i < 10; i++)
     {
