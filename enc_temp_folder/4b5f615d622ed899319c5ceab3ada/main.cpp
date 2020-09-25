@@ -22,7 +22,7 @@ void onMousePress(int x, int y)
 // Что делаем в случае отпускания мышки:
 void onMouseRelease(int x, int y)
 {
-    onMouseMove(x, y); // то же , что и в случае движения мышки
+    onMouseMove(x, y);
 }
 
 
