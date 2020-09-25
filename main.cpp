@@ -16,7 +16,7 @@ void onMousePress(int x, int y)
     setlinestyle(SOLID_LINE, 0, 3);
     circle(x + 134, y + 91, 10);  // Первый глаз
     circle(x + 177, y + 118, 10); // Второй глаз
-}
+} 
 
 
 // Что делаем в случае отпускания мышки:
